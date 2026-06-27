@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="画像プレースホルダー">
+  <rect width="800" height="600" fill="#e6e6e2"/>
+  <g fill="none" stroke="#9a9a92" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="318" y="232" width="164" height="136" rx="10"/>
+    <circle cx="362" cy="280" r="14" fill="#9a9a92" stroke="none"/>
+    <path d="M334 360l44-44 38 34 30-26 38 36"/>
+  </g>
+  <text x="400" y="430" text-anchor="middle" fill="#9a9a92" font-family="'Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif" font-size="30" letter-spacing="6">画像をここに設置</text>
+</svg>

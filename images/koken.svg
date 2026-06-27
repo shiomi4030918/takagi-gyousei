@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="任意後見（イメージ）">
+  <rect width="800" height="600" fill="#eef1e9"/>
+  <circle cx="675" cy="115" r="120" fill="#e2e9d7"/>
+  <circle cx="120" cy="500" r="80" fill="#e6ecdc"/>
+  <g fill="none" stroke="#5b6650" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M400 232 c-28 -28 -54 -42 -54 -70 a27 27 0 0 1 54 -10 a27 27 0 0 1 54 10 c0 28 -26 42 -54 70 z" fill="#cdb98a"/>
+    <path d="M300 322 q100 96 200 0 l0 34 q-100 96 -200 0 z" fill="#c5d3b2"/>
+  </g>
+  <text x="400" y="540" text-anchor="middle" fill="#6e7d63" font-family="'Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif" font-size="30" letter-spacing="4">任意後見（イメージ）</text>
+</svg>

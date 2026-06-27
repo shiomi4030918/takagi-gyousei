@@ -6,8 +6,8 @@
 
 /* リード文ブロック */
 .intro-block { max-width: 800px; margin: 0 auto 64px; text-align: center; }
-.intro-block h2 { font-size: clamp(22px, 3vw, 30px); line-height: 1.6; margin-bottom: 20px; }
-.intro-block p { color: var(--ink-soft); font-size: 15.5px; }
+.intro-block h2 { font-size: clamp(25px, 3vw, 33px); line-height: 1.6; margin-bottom: 20px; }
+.intro-block p { color: var(--ink-soft); font-size: 19.5px; }
 
 /* 2カラム（本文＋ビジュアル） */
 .split { display:grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items:center; margin-bottom: 72px; }
@@ -18,13 +18,13 @@
   aspect-ratio: 4/3; background:#e6e6e2; display:flex; align-items:center; justify-content:center;
 }
 .split-visual svg { width:100%; height:100%; }
-.split-body h3 { font-size: 23px; margin-bottom: 6px; }
-.split-body .label { font-size: 12px; color: var(--olive-500); letter-spacing:.2em; }
-.split-body p { color: var(--ink-soft); font-size: 15px; margin-top: 16px; }
+.split-body h3 { font-size: 25.5px; margin-bottom: 6px; }
+.split-body .label { font-size: 14.5px; color: var(--olive-500); letter-spacing:.2em; }
+.split-body p { color: var(--ink-soft); font-size: 19px; margin-top: 16px; }
 
 /* チェックリスト */
 .check-list { margin-top: 22px; }
-.check-list li { position: relative; padding: 12px 0 12px 36px; border-bottom: 1px dashed var(--line); font-size: 15px; }
+.check-list li { position: relative; padding: 12px 0 12px 36px; border-bottom: 1px dashed var(--line); font-size: 19px; }
 .check-list li::before {
   content:""; position:absolute; left: 4px; top: 16px; width: 20px; height: 20px; border-radius:50%;
   background: var(--olive-100);
@@ -37,95 +37,95 @@
 
 /* こんな方へ（悩みボックス） */
 .target-box { background: var(--olive-050); border:1px solid var(--olive-200); border-radius: var(--radius); padding: 36px 40px; margin: 40px 0; }
-.target-box h3 { font-size: 19px; margin-bottom: 18px; display:flex; align-items:center; gap:10px; }
+.target-box h3 { font-size: 21.5px; margin-bottom: 18px; display:flex; align-items:center; gap:10px; }
 .target-box h3::before { content:""; width:8px; height:8px; border-radius:50%; background: var(--gold); }
 .target-box ul { display:grid; gap: 12px; }
-.target-box li { position:relative; padding-left: 28px; font-size: 15px; }
+.target-box li { position:relative; padding-left: 28px; font-size: 19px; }
 .target-box li::before { content:"✓"; position:absolute; left:0; color: var(--olive-600); font-weight:700; }
 
 /* 料金テーブル */
 .price-table { width:100%; border-collapse: collapse; margin-top: 14px; background:#fff; border-radius: var(--radius); overflow:hidden; box-shadow: var(--shadow-sm); }
-.price-table th, .price-table td { padding: 16px 20px; text-align:left; border-bottom: 1px solid var(--line); font-size: 14.5px; }
+.price-table th, .price-table td { padding: 16px 20px; text-align:left; border-bottom: 1px solid var(--line); font-size: 18.5px; }
 .price-table thead th { background: var(--olive-600); color:#fff; font-weight:600; letter-spacing:.05em; }
 .price-table tbody th { font-weight:600; color: var(--olive-900); width: 50%; }
 .price-table td { color: var(--ink-soft); text-align:right; font-family: var(--serif); }
 .price-table tbody tr:last-child th, .price-table tbody tr:last-child td { border-bottom:none; }
-.price-note { font-size: 12.5px; color: var(--ink-mute); margin-top: 12px; }
+.price-note { font-size: 15px; color: var(--ink-mute); margin-top: 12px; }
 
 /* ステップ（手続きの流れ・横/縦） */
 .steps { counter-reset: step; display:grid; gap: 16px; margin-top: 16px; }
 .step-row { display:flex; gap: 20px; align-items:flex-start; background:#fff; border:1px solid var(--line); border-radius: var(--radius-sm); padding: 22px 24px; box-shadow: var(--shadow-sm); }
 .step-row .sn { flex:none; counter-increment: step; }
-.step-row .sn::before { content: "STEP " counter(step); font-family: var(--serif); font-size: 12px; color:#fff; background: var(--olive-500); padding: 5px 12px; border-radius: 999px; letter-spacing:.08em; }
-.step-row .sb h4 { font-size: 16px; margin-bottom: 4px; }
-.step-row .sb p { font-size: 14px; color: var(--ink-soft); margin:0; }
+.step-row .sn::before { content: "STEP " counter(step); font-family: var(--serif); font-size: 14.5px; color:#fff; background: var(--olive-500); padding: 5px 12px; border-radius: 999px; letter-spacing:.08em; }
+.step-row .sb h4 { font-size: 19.5px; margin-bottom: 4px; }
+.step-row .sb p { font-size: 18px; color: var(--ink-soft); margin:0; }
 
 /* FAQ */
 .faq { max-width: 820px; margin: 0 auto; }
 .faq-item { background:#fff; border:1px solid var(--line); border-radius: var(--radius-sm); margin-bottom: 14px; box-shadow: var(--shadow-sm); overflow:hidden; }
-.faq-q { display:flex; align-items:center; gap:14px; padding: 20px 24px; cursor:pointer; font-weight:600; color: var(--olive-900); font-size:15.5px; }
-.faq-q .mk { flex:none; font-family:var(--serif); color: var(--gold); font-size: 20px; }
-.faq-q::after { content:"+"; margin-left:auto; font-size: 22px; color: var(--olive-500); transition:.3s; }
+.faq-q { display:flex; align-items:center; gap:14px; padding: 20px 24px; cursor:pointer; font-weight:600; color: var(--olive-900); font-size:19.5px; }
+.faq-q .mk { flex:none; font-family:var(--serif); color: var(--gold); font-size: 22.5px; }
+.faq-q::after { content:"+"; margin-left:auto; font-size: 24.5px; color: var(--olive-500); transition:.3s; }
 .faq-item.open .faq-q::after { transform: rotate(45deg); }
 .faq-a { max-height: 0; overflow:hidden; transition: max-height .35s ease; }
-.faq-a-inner { padding: 0 24px 22px 58px; color: var(--ink-soft); font-size: 14.5px; }
+.faq-a-inner { padding: 0 24px 22px 58px; color: var(--ink-soft); font-size: 18.5px; }
 .faq-item.open .faq-a { max-height: 400px; }
 
 /* 関連業務 */
 .related { display:grid; grid-template-columns: repeat(3,1fr); gap: 18px; margin-top: 16px; }
-.related a { background:#fff; border:1px solid var(--line); border-radius: var(--radius-sm); padding: 20px 22px; box-shadow: var(--shadow-sm); display:flex; align-items:center; justify-content:space-between; font-weight:600; color: var(--olive-900); font-size: 14.5px; }
+.related a { background:#fff; border:1px solid var(--line); border-radius: var(--radius-sm); padding: 20px 22px; box-shadow: var(--shadow-sm); display:flex; align-items:center; justify-content:space-between; font-weight:600; color: var(--olive-900); font-size: 18.5px; }
 .related a:hover { background: var(--olive-050); transform: translateY(-3px); }
 .related a .arrow { color: var(--olive-500); }
 
 /* CTA小（下層用） */
 .cta-mini { background: linear-gradient(120deg, var(--olive-700), var(--olive-500)); border-radius: var(--radius); color:#fff; text-align:center; padding: 54px 30px; }
-.cta-mini h2 { color:#fff; font-size: clamp(22px,3vw,28px); margin-bottom: 10px; }
+.cta-mini h2 { color:#fff; font-size: clamp(25px, 3vw, 31px); margin-bottom: 10px; }
 .cta-mini p { opacity:.92; margin-bottom: 26px; }
-.cta-mini .num { font-family:var(--serif); font-size: 28px; display:block; margin-top: 18px; }
+.cta-mini .num { font-family:var(--serif); font-size: 30.5px; display:block; margin-top: 18px; }
 .cta-mini .actions { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
 
 /* =========================================================
    事務所案内
    ========================================================= */
 .info-table { width:100%; border-collapse: collapse; background:#fff; border-radius: var(--radius); overflow:hidden; box-shadow: var(--shadow-sm); }
-.info-table th, .info-table td { padding: 18px 24px; text-align:left; border-bottom:1px solid var(--line); font-size: 15px; vertical-align: top; }
+.info-table th, .info-table td { padding: 18px 24px; text-align:left; border-bottom:1px solid var(--line); font-size: 19px; vertical-align: top; }
 .info-table th { width: 30%; background: var(--olive-050); color: var(--olive-900); font-weight:600; }
 .info-table td { color: var(--ink-soft); }
 .info-table tr:last-child th, .info-table tr:last-child td { border-bottom:none; }
 
-.map-frame { margin-top: 28px; border-radius: var(--radius); overflow:hidden; box-shadow: var(--shadow-sm); aspect-ratio: 16/7; background: var(--olive-100); display:flex; align-items:center; justify-content:center; color: var(--ink-mute); font-size: 14px; text-align:center; }
+.map-frame { margin-top: 28px; border-radius: var(--radius); overflow:hidden; box-shadow: var(--shadow-sm); aspect-ratio: 16/7; background: var(--olive-100); display:flex; align-items:center; justify-content:center; color: var(--ink-mute); font-size: 16.5px; text-align:center; }
 
 .value-grid { display:grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 16px; }
 .value-card { background:#fff; border:1px solid var(--line); border-radius: var(--radius); padding: 30px 28px; box-shadow: var(--shadow-sm); text-align:center; }
 .value-card .ic { color: var(--olive-600); margin-bottom: 14px; }
-.value-card h3 { font-size: 17px; margin-bottom: 10px; }
-.value-card p { font-size: 14px; color: var(--ink-soft); }
+.value-card h3 { font-size: 19.5px; margin-bottom: 10px; }
+.value-card p { font-size: 18px; color: var(--ink-soft); }
 
 /* =========================================================
    お問い合わせ
    ========================================================= */
 .contact-wrap { display:grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items:start; }
 .contact-info { background: var(--olive-050); border-radius: var(--radius); padding: 40px 38px; border:1px solid var(--olive-200); }
-.contact-info h3 { font-size: 20px; margin-bottom: 18px; }
-.contact-info .big-tel { font-family:var(--serif); font-size: 30px; color: var(--olive-800,#5b6650); letter-spacing:.04em; }
-.contact-info .small { font-size: 13px; color: var(--ink-mute); }
+.contact-info h3 { font-size: 22.5px; margin-bottom: 18px; }
+.contact-info .big-tel { font-family:var(--serif); font-size: 32.5px; color: var(--olive-800,#5b6650); letter-spacing:.04em; }
+.contact-info .small { font-size: 15.5px; color: var(--ink-mute); }
 .contact-info ul { margin-top: 24px; display:grid; gap:14px; }
-.contact-info li { font-size: 14.5px; display:flex; gap:12px; }
+.contact-info li { font-size: 18.5px; display:flex; gap:12px; }
 .contact-info li b { color: var(--olive-900); }
 
 .form-card { background:#fff; border:1px solid var(--line); border-radius: var(--radius); padding: 40px 38px; box-shadow: var(--shadow-sm); }
 .field { margin-bottom: 22px; }
-.field label { display:block; font-weight:600; font-size: 14px; margin-bottom: 8px; color: var(--olive-900); }
-.field label .req { color:#c2603f; font-size: 11px; margin-left:8px; background:#f7e6df; padding:2px 8px; border-radius:4px; }
+.field label { display:block; font-weight:600; font-size: 18px; margin-bottom: 8px; color: var(--olive-900); }
+.field label .req { color:#c2603f; font-size: 13.5px; margin-left:8px; background:#f7e6df; padding:2px 8px; border-radius:4px; }
 .field input, .field select, .field textarea {
   width:100%; padding: 13px 16px; border:1.5px solid var(--line); border-radius: var(--radius-sm);
-  font-family: var(--sans); font-size: 15px; color: var(--ink); background: var(--cream); transition:.2s;
+  font-family: var(--sans); font-size: 19px; color: var(--ink); background: var(--cream); transition:.2s;
 }
 .field input:focus, .field select:focus, .field textarea:focus { outline:none; border-color: var(--olive-500); background:#fff; box-shadow: 0 0 0 3px var(--olive-100); }
 .field textarea { resize: vertical; min-height: 130px; }
-.form-check { display:flex; gap:10px; align-items:flex-start; font-size: 13.5px; color: var(--ink-soft); margin-bottom: 24px; }
+.form-check { display:flex; gap:10px; align-items:flex-start; font-size: 16px; color: var(--ink-soft); margin-bottom: 24px; }
 .form-check input { width:auto; margin-top: 4px; }
-.form-note { display:none; margin-top: 18px; padding: 16px 18px; background: var(--olive-050); border:1px solid var(--olive-200); border-radius: var(--radius-sm); font-size: 13.5px; color: var(--olive-900); }
+.form-note { display:none; margin-top: 18px; padding: 16px 18px; background: var(--olive-050); border:1px solid var(--olive-200); border-radius: var(--radius-sm); font-size: 16px; color: var(--olive-900); }
 .form-note.show { display:block; }
 
 @media (max-width: 900px) {

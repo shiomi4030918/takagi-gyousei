@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="高木行政書士事務所 ロゴ（オリーブ）">
+  <circle cx="50" cy="50" r="46" fill="#ffffff" stroke="#6e7d63" stroke-width="2.2"/>
+  <defs>
+    <path id="leaf" d="M0 0 C9 -6 25 -5 34 0 C25 5 9 6 0 0 Z"/>
+  </defs>
+  <!-- 枝 -->
+  <path d="M33 80 C44 66 50 56 56 36" fill="none" stroke="#7c8a6f" stroke-width="2.2" stroke-linecap="round"/>
+  <!-- オリーブへの小枝 -->
+  <path d="M48 60 C46 66 45 70 45 73" fill="none" stroke="#7c8a6f" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M50 58 C53 64 55 68 56 72" fill="none" stroke="#7c8a6f" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- 葉（二色のシルバーグリーン） -->
+  <g transform="scale(0.92)">
+    <use href="#leaf" transform="translate(61,40) rotate(-82)" fill="#728049"/>
+    <use href="#leaf" transform="translate(61,42) rotate(-22)" fill="#a9b58e"/>
+    <use href="#leaf" transform="translate(56,48) rotate(-128)" fill="#8a9a6a"/>
+    <use href="#leaf" transform="translate(55,57) rotate(-38)" fill="#9aa97e"/>
+    <use href="#leaf" transform="translate(50,62) rotate(-150)" fill="#728049"/>
+    <use href="#leaf" transform="translate(50,68) rotate(-50)" fill="#8a9a6a"/>
+  </g>
+  <!-- 実（オリーブ） -->
+  <g>
+    <ellipse cx="45" cy="76" rx="7" ry="9" transform="rotate(18 45 76)" fill="#7c8a4f"/>
+    <ellipse cx="43.5" cy="73.5" rx="2.2" ry="3" transform="rotate(18 43.5 73.5)" fill="#ffffff" opacity=".35"/>
+    <ellipse cx="57" cy="78" rx="7" ry="9" transform="rotate(12 57 78)" fill="#8d9a5c"/>
+    <ellipse cx="55.5" cy="75.5" rx="2.2" ry="3" transform="rotate(12 55.5 75.5)" fill="#ffffff" opacity=".4"/>
+  </g>
+</svg>

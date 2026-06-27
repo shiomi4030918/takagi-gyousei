@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="代表（写真は後日差し替え）">
+  <rect width="800" height="600" fill="#eef1e9"/>
+  <circle cx="675" cy="115" r="120" fill="#e2e9d7"/>
+  <circle cx="120" cy="500" r="80" fill="#e6ecdc"/>
+  <g fill="none" stroke="#5b6650" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M318 430 q12 -116 82 -116 q70 0 82 116 z" fill="#a7b69a"/>
+    <circle cx="400" cy="246" r="62" fill="#ead9c6"/>
+    <path d="M338 250 a62 62 0 0 1 124 0 q-8 -46 -62 -48 q-54 2 -62 48 z" fill="#6e7d63" stroke-width="6"/>
+  </g>
+  <text x="400" y="540" text-anchor="middle" fill="#6e7d63" font-family="'Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif" font-size="30" letter-spacing="4">代表（写真は後日差し替え）</text>
+</svg>

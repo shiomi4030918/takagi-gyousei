@@ -10,19 +10,26 @@ document.addEventListener('DOMContentLoaded', function () {
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
 
-  /* モバイルメニュー */
+  /* モバイルメニュー（右ドロワー＋暗幕） */
   const toggle = document.querySelector('.nav-toggle');
   const nav = document.querySelector('.nav');
   if (toggle && nav) {
-    toggle.addEventListener('click', () => {
-      const open = nav.classList.toggle('open');
+    let backdrop = document.querySelector('.nav-backdrop');
+    if (!backdrop) {
+      backdrop = document.createElement('div');
+      backdrop.className = 'nav-backdrop';
+      document.body.appendChild(backdrop);
+    }
+    const setMenu = (open) => {
+      nav.classList.toggle('open', open);
       toggle.classList.toggle('open', open);
+      backdrop.classList.toggle('show', open);
+      document.body.classList.toggle('menu-open', open);
       toggle.setAttribute('aria-expanded', open);
-    });
-    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-      nav.classList.remove('open');
-      toggle.classList.remove('open');
-    }));
+    };
+    toggle.addEventListener('click', () => setMenu(!nav.classList.contains('open')));
+    backdrop.addEventListener('click', () => setMenu(false));
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
   }
 
   /* スクロールでフェードイン */
@@ -71,4 +78,17 @@ document.addEventListener('DOMContentLoaded', function () {
       a.setAttribute('aria-current', 'page');
     }
   });
+});
+
+/* スプラッシュ画面の制御 */
+document.addEventListener('DOMContentLoaded', function () {
+  var splash = document.getElementById('splash');
+  if (!splash) return;
+  document.body.classList.add('splash-lock');
+  function close() {
+    splash.classList.add('hide');
+    document.body.classList.remove('splash-lock');
+  }
+  splash.addEventListener('click', close);
+  setTimeout(close, 2300);
 });

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="公正証書遺言（イメージ）">
+  <rect width="800" height="600" fill="#eef1e9"/>
+  <circle cx="675" cy="115" r="120" fill="#e2e9d7"/>
+  <circle cx="120" cy="500" r="80" fill="#e6ecdc"/>
+  <g fill="none" stroke="#5b6650" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="300" y="168" width="200" height="262" rx="14" fill="#ffffff"/>
+    <path d="M336 222 h128 M336 258 h128 M336 294 h96" stroke="#a7b69a" stroke-width="12"/>
+    <circle cx="452" cy="372" r="34" stroke="#c2603f" stroke-width="7"/>
+    <g transform="rotate(38 470 300)">
+      <rect x="458" y="150" width="26" height="180" rx="11" fill="#b9a47a"/>
+      <path d="M458 330 l13 34 l13 -34 z" fill="#5b6650" stroke="none"/>
+    </g>
+  </g>
+  <text x="400" y="540" text-anchor="middle" fill="#6e7d63" font-family="'Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif" font-size="30" letter-spacing="4">公正証書遺言（イメージ）</text>
+</svg>

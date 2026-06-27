@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="遺言執行・手続き（イメージ）">
+  <rect width="800" height="600" fill="#eef1e9"/>
+  <circle cx="675" cy="115" r="120" fill="#e2e9d7"/>
+  <circle cx="120" cy="500" r="80" fill="#e6ecdc"/>
+  <g fill="none" stroke="#5b6650" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="305" y="184" width="190" height="250" rx="16" fill="#ffffff"/>
+    <rect x="358" y="166" width="84" height="36" rx="11" fill="#c5d3b2"/>
+    <path d="M345 306 l42 44 l80 -96" stroke="#6e7d63" stroke-width="17"/>
+  </g>
+  <text x="400" y="540" text-anchor="middle" fill="#6e7d63" font-family="'Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif" font-size="30" letter-spacing="4">遺言執行・手続き（イメージ）</text>
+</svg>

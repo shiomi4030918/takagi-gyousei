@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="ご相談（イメージ）">
+  <rect width="800" height="600" fill="#eef1e9"/>
+  <circle cx="675" cy="115" r="120" fill="#e2e9d7"/>
+  <circle cx="120" cy="500" r="80" fill="#e6ecdc"/>
+  <g fill="none" stroke="#5b6650" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="262" y="190" width="208" height="128" rx="26" fill="#c5d3b2"/>
+    <path d="M300 318 l0 44 l44 -44 z" fill="#c5d3b2"/>
+    <circle cx="322" cy="254" r="10" fill="#5b6650" stroke="none"/>
+    <circle cx="366" cy="254" r="10" fill="#5b6650" stroke="none"/>
+    <circle cx="410" cy="254" r="10" fill="#5b6650" stroke="none"/>
+    <rect x="360" y="262" width="196" height="120" rx="26" fill="#ffffff"/>
+    <path d="M516 382 l0 44 l-44 -44 z" fill="#ffffff"/>
+    <path d="M392 308 h128 M392 340 h92" stroke="#a7b69a" stroke-width="11"/>
+  </g>
+  <text x="400" y="540" text-anchor="middle" fill="#6e7d63" font-family="'Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif" font-size="30" letter-spacing="4">ご相談（イメージ）</text>
+</svg>

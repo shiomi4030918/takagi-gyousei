@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="事務所（イメージ）">
+  <rect width="800" height="600" fill="#eef1e9"/>
+  <circle cx="675" cy="115" r="120" fill="#e2e9d7"/>
+  <circle cx="120" cy="500" r="80" fill="#e6ecdc"/>
+  <g fill="none" stroke="#5b6650" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="288" y="182" width="224" height="22" rx="8" fill="#6e7d63"/>
+    <rect x="300" y="204" width="200" height="220" rx="8" fill="#ffffff"/>
+    <rect x="330" y="232" width="48" height="44" fill="#c5d3b2" stroke-width="6"/>
+    <rect x="422" y="232" width="48" height="44" fill="#c5d3b2" stroke-width="6"/>
+    <rect x="330" y="296" width="48" height="44" fill="#c5d3b2" stroke-width="6"/>
+    <rect x="376" y="356" width="48" height="68" fill="#b9a47a" stroke-width="6"/>
+  </g>
+  <text x="400" y="540" text-anchor="middle" fill="#6e7d63" font-family="'Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif" font-size="30" letter-spacing="4">事務所（イメージ）</text>
+</svg>
