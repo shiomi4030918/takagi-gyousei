@@ -1,14 +1,22 @@
 /* 高木行政書士事務所 - 共通スクリプト */
 document.addEventListener('DOMContentLoaded', function () {
 
-  /* ヘッダーのスクロール影 */
+  /* ヘッダーのスクロール影 ＋ ヒーロー上では隠し、スクロールで表示 */
   const header = document.querySelector('.site-header');
+  const hero = document.querySelector('.hero');
   const onScroll = () => {
     if (!header) return;
     header.classList.toggle('scrolled', window.scrollY > 20);
+    if (hero) {
+      const threshold = Math.min(hero.offsetHeight - 120, window.innerHeight * 0.6);
+      header.classList.toggle('is-hidden', window.scrollY < threshold);
+    } else {
+      header.classList.remove('is-hidden');
+    }
   };
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
 
   /* モバイルメニュー（右ドロワー＋暗幕） */
   const toggle = document.querySelector('.nav-toggle');
@@ -90,5 +98,5 @@ document.addEventListener('DOMContentLoaded', function () {
     document.body.classList.remove('splash-lock');
   }
   splash.addEventListener('click', close);
-  setTimeout(close, 2300);
+  setTimeout(close, 1700);
 });
