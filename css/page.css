@@ -134,3 +134,26 @@
   .split-visual { max-width: 440px; margin: 0 auto; }
   .related, .value-grid { grid-template-columns: 1fr; }
 }
+
+/* 代表ごあいさつ：写真を固定幅にして文章を広く */
+@media (min-width: 901px){ .split--greeting { grid-template-columns: 300px 1fr; } }
+
+/* ---------- CTA（背景画像＋角丸カード：ホームと共通の手法）---------- */
+.cta-band {
+  position: relative; overflow: hidden; text-align: center;
+  padding: 52px 0;
+  background: url(../images/office.jpg) center/cover no-repeat;
+}
+.cta-card {
+  position: relative; z-index: 1; max-width: 700px; margin: 0 auto;
+  background: rgba(250,249,245,.97); border: 1px solid var(--line);
+  border-radius: 24px; padding: 40px 44px; box-shadow: var(--shadow-lg);
+}
+.cta-band .en { letter-spacing:.35em; font-size: 14.5px; color: var(--olive-500); font-family:var(--serif); }
+.cta-band h2 { color: var(--olive-900); font-size: clamp(27px, 3.4vw, 37px); margin: 14px 0 10px; }
+.cta-band p { color: var(--ink-soft); margin-bottom: 24px; }
+.cta-actions { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+.cta-tel { background: var(--olive-600); color:#fff; box-shadow: var(--shadow-sm); }
+.cta-tel:hover { background: var(--olive-700); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.cta-band .tel-note { font-size: 13px; color: var(--ink-mute); }
+@media (max-width:768px){ .cta-band { padding: 40px 0; } .cta-card { padding: 32px 20px; border-radius: 18px; } }

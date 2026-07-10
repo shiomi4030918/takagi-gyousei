@@ -42,11 +42,11 @@
 /* ヒーロー画像（イラスト風の柔らかいビジュアル） */
 .hero-visual { position: relative; }
 .hero-visual .photo {
-  border-radius: 200px 200px 24px 24px;
+  border-radius: 130px 130px 22px 22px;
   overflow: hidden;
   box-shadow: var(--shadow-lg);
-  aspect-ratio: 3/4;
-  background:#e6e6e2; display:flex; align-items:center; justify-content:center;
+  aspect-ratio: 4/3;
+  background: #dbe4cf; display:flex; align-items:center; justify-content:center;
 }
 .hero-visual .photo svg { width:100%; height:100%; }
 .hero-badge {
@@ -110,7 +110,7 @@
 .flow-body p { font-size: 18.5px; color: var(--ink-soft); margin: 0; }
 
 /* ---------- 事務所紹介（代表メッセージ） ---------- */
-.profile { display:grid; grid-template-columns: .8fr 1.2fr; gap: 48px; align-items:center; }
+.profile { display:grid; grid-template-columns: 1fr 2fr; gap: 48px; align-items:center; }
 .profile-photo {
   border-radius: var(--radius); overflow:hidden; box-shadow: var(--shadow-md);
   aspect-ratio: 4/5; background:#e6e6e2; display:flex; align-items:center; justify-content:center;
@@ -216,7 +216,8 @@
   .hero-points { margin-top: 22px; }
   .hero-visual { display: flex; align-items: center; justify-content: center; }
   .hero-visual::before { display: none; }
-  .hero-visual .photo { height: min(68vh, 620px); aspect-ratio: 3 / 4; width: auto; margin: 0; }
+  .hero-inner { grid-template-columns: .72fr 1.5fr; gap: 30px; }
+  .hero-visual .photo { width: 100%; aspect-ratio: 4 / 3; height: auto; max-height: 84vh; margin: 0; }
 }
 
 

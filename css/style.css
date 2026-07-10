@@ -311,7 +311,7 @@ body.menu-open { overflow: hidden; }
 
 
 /* ヒーロー画像の表示位置（看板が中央寄りになるよう少し左へ） */
-.hero-visual .photo img { object-position: 56% center; transform: translateY(4%) scale(1.1); }
+.hero-visual .photo img { object-fit: contain; object-position: center; transform: none; }
 
 
 /* オリーブの装飾（全体）*/
