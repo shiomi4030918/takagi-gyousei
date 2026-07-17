@@ -250,3 +250,141 @@
 .hero-leaf-2 { top:30px; right:-30px; width:128px; opacity:.5; transform: rotate(-34deg) scaleX(-1); }
 .hero-leaf-3 { bottom:-34px; left:24px; width:118px; opacity:.42; transform: rotate(154deg); }
 @media (max-width: 768px){ .hero-leaf { display:none; } }
+
+/* =========================================================
+   ヒーロー：大きな角丸写真カード＋左下見出し＋右下ボタン
+   ========================================================= */
+.hero { position: relative; padding: 94px 0 26px; background: #fff; overflow: hidden; min-height: 100vh; display: flex; flex-direction: column; }
+.hero::after, .hero::before { display: none !important; }
+
+.hero-stage { position: relative; flex: 1 1 auto; height: auto; min-height: 400px; }
+
+/* 写真：左に大きめの余白、右は画面端近くまで。左上を大きな丸みに */
+.hero-photo {
+  position: absolute; top: 0; bottom: 0;
+  left: clamp(28px, 7.2vw, 160px);
+  right: clamp(8px, 0.8vw, 18px);
+  overflow: hidden;
+  border-radius: clamp(130px, 15vw, 240px) 0 0 0;
+  box-shadow: 0 18px 44px rgba(74,83,64,.14);
+}
+.hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+
+/* 画像全体にうっすら白フィルター */
+.hero-photo::before {
+  content: ""; position: absolute; inset: 0; z-index: 2; pointer-events: none;
+  background: rgba(255,255,255,.13);
+}
+
+/* 左下から掛かる淡いグリーンの曲線オーバーレイ */
+.hero-photo::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(110% 120% at -4% 112%,
+      rgba(150,185,140,.66) 26%,
+      rgba(150,185,140,.38) 44%,
+      rgba(150,185,140,.14) 56%,
+      rgba(150,185,140,0) 66%);
+}
+
+/* 文字周りの読みやすさ確保（左下をほんのり白く） */
+.hero-scrim {
+  position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background:
+    linear-gradient(to right, rgba(255,255,255,.88) 0%, rgba(255,255,255,.55) 24%, rgba(255,255,255,.14) 46%, rgba(255,255,255,0) 58%),
+    radial-gradient(80% 90% at 0% 108%, rgba(255,255,255,.5) 18%, rgba(255,255,255,.2) 42%, rgba(255,255,255,0) 62%);
+}
+
+/* テキスト＋ボタンの土台（画面幅いっぱい・下寄せ） */
+.hero-content {
+  position: absolute; inset: 0; z-index: 2;
+  display: flex; align-items: flex-end; justify-content: space-between; gap: 32px;
+  padding: 0 clamp(30px, 3.2vw, 62px) clamp(30px, 5vh, 54px) clamp(20px, 4.4vw, 96px);
+}
+
+.hero-copy { max-width: 60%; }
+.hero .hero-copy .hero-title {
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(40px, 5.2vw, 78px);
+  line-height: 1.22; letter-spacing: .02em; color: #1b1c19;
+}
+.hero-title .ttl-seg { display: inline-block; }
+
+.hero .hero-copy .hero-sub {
+  margin: 22px 0 0; font-size: clamp(14.5px, 1.3vw, 18.5px);
+  line-height: 2.1; color: #26271f; font-weight: 500;
+}
+
+/* 右下の縦積みボタン */
+.hero-cards { display: flex; flex-direction: column; gap: 18px; width: clamp(250px, 21.5vw, 312px); flex: none; }
+.hero-card {
+  display: flex; align-items: center; gap: 14px;
+  background: #fff;
+  border: none;
+  border-radius: 10px; padding: 18px 20px;
+  box-shadow: 0 8px 22px rgba(40,50,35,.16);
+  font-family: var(--sans); font-size: 17.5px; font-weight: 700; color: #23241f;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.hero-card:hover { transform: translateX(5px); box-shadow: 0 14px 32px rgba(40,50,35,.24); }
+.hero-card .hc-ico { color: var(--olive-600); display: flex; flex: none; }
+.hero-card .hc-txt { flex: 1; letter-spacing: .04em; }
+.hero-card .hc-arrow { color: #6fae62; font-size: 19px; font-weight: 700; transition: transform .25s ease; }
+.hero-card:hover .hc-arrow { transform: translateX(4px); }
+
+/* ---------- レスポンシブ ---------- */
+@media (max-width: 900px) {
+  .hero { padding: 86px 0 22px; min-height: auto; display: block; }
+  .hero-stage { flex: none; height: clamp(520px, 84vh, 760px); min-height: 0; }
+  .hero-photo {
+    left: 14px; right: 14px;
+    border-radius: 72px 0 0 0;
+  }
+  .hero-photo::after {
+    background:
+      radial-gradient(130% 110% at -6% 112%,
+        rgba(150,185,140,.66) 30%,
+        rgba(150,185,140,.36) 52%,
+        rgba(150,185,140,0) 72%);
+  }
+  .hero-scrim {
+    background:
+      linear-gradient(to top, rgba(255,255,255,.94) 0%, rgba(255,255,255,.78) 52%, rgba(255,255,255,0) 86%);
+  }
+  .hero-content { flex-direction: column; align-items: stretch; justify-content: flex-end; gap: 22px; padding: 0 30px 30px; }
+  .hero-copy { max-width: 100%; }
+  .hero .hero-copy .hero-title { font-size: clamp(40px, 10.5vw, 64px); }
+  .hero .hero-copy .hero-sub br { display: none; }
+  .hero-cards { width: 100%; gap: 12px; }
+  .hero-card { padding: 15px 18px; }
+}
+@media (max-width: 560px) {
+  .hero-photo { left: 10px; right: 10px; border-radius: 56px 0 0 0; }
+}
+
+/* ---------- ヒーロー：画像の自動切り替え（クロスフェード） ---------- */
+.hero-photo .hero-slide {
+  position: absolute; inset: 0;
+  opacity: 0; transition: opacity 1.4s ease;
+}
+.hero-photo .hero-slide.is-active { opacity: 1; }
+
+/* ---------- ヒーロー下のスクロールインジケーター ---------- */
+.hero .hero-scroll {
+  display: flex; flex-direction: column; align-items: center; gap: 9px;
+  width: max-content; margin: 16px auto 0;
+  color: var(--olive-700);
+}
+.hero .hero-scroll .hs-circle {
+  display: flex; align-items: center; justify-content: center;
+  color: var(--olive-600);
+  animation: hsBob 1.8s ease-in-out infinite;
+}
+.hero .hero-scroll .hs-txt { font-family: var(--serif); font-size: 12px; letter-spacing: .3em; padding-left: .3em; }
+@keyframes hsBob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(7px); } }
+@media (prefers-reduced-motion: reduce) { .hero .hero-scroll .hs-circle { animation: none; } }
+@media (max-width: 768px) {
+  .hero .hero-scroll { display: none; }
+}

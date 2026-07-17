@@ -9,9 +9,9 @@
 <meta name="description" content="高木行政書士事務所は、岐阜県多治見市を拠点に、相続手続き・遺言書作成を専門とする行政書士事務所です。女性行政書士がやさしく、ていねいに、最後までサポートいたします。初回相談無料。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=56">
-<link rel="stylesheet" href="css/home.css?v=56">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Shippori+Mincho:wght@500;600;700&family=Yusei+Magic&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=63">
+<link rel="stylesheet" href="css/home.css?v=63">
 </head>
 <body>
 <!-- スプラッシュ画面 -->
@@ -56,40 +56,44 @@
 
 <!-- ============ ヒーロー ============ -->
 <section class="hero">
-  <div class="hero-brand"><img src="images/logo.svg" alt="" width="40" height="40"><span>高木行政書士事務所</span></div>
-  <div class="container hero-inner">
-    <div class="hero-copy">
-      <span class="tagline">人に寄り添う、街の身近な相談窓口</span>
-      <h1>
-        大切な想いを、<br>
-        <span class="mark">確かなかたち</span>に。<br>
-        <span class="accent">あなたに寄り添う</span>相続のパートナー。
-      </h1>
-      <p class="desc">
-相続・遺言のご相談を、女性行政書士がやさしくご案内します。<br>おひとりで悩まず、まずはご相談ください。
-      </p>
-      <div class="hero-actions">
-        <a href="contact.html" class="btn btn--primary btn--lg">無料相談を予約する <span class="arrow">→</span></a>
-        <a href="#services" class="btn btn--ghost btn--lg">取扱業務を見る</a>
-      </div>
-      <ul class="hero-points">
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#8fa07f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>初回相談無料</li>
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#8fa07f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>女性行政書士が対応</li>
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#8fa07f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>土日も予約で対応</li>
-      </ul>
+  <div class="hero-stage">
+    <div class="hero-photo">
+      <img class="hero-slide is-active" src="images/hero1.jpg" alt="ご相談の様子" onerror="this.onerror=null;this.src='images/hero.jpg'">
+      <img class="hero-slide" src="images/hero2.jpg" alt="" onerror="this.dataset.missing='1'">
+      <img class="hero-slide" src="images/hero3.jpg" alt="" onerror="this.dataset.missing='1'">
     </div>
+    <div class="hero-scrim"></div>
 
-    <div class="hero-visual">
-      <div class="photo">
-        <img src="images/hero.jpg" alt="ご相談・事務所のイメージ" loading="lazy" onerror="this.onerror=null;this.src='images/hero.svg'">
+    <div class="hero-content">
+      <div class="hero-copy">
+        <h1 class="hero-title"><span class="ttl-seg">その想いを、</span><span class="ttl-seg">未来へ。</span></h1>
+        <p class="hero-sub">相続・遺言のご相談を、女性行政書士がやさしくご案内します。<br>おひとりで悩まず、はじめの一歩をご一緒します。</p>
+      </div>
+
+      <div class="hero-cards">
+        <a href="yuigon-kosei.html" class="hero-card">
+          <span class="hc-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="5" y="3" width="14" height="18" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 8h8M8 12h8M8 16h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+          <span class="hc-txt">遺言書作成</span>
+          <span class="hc-arrow">→</span>
+        </a>
+        <a href="souzoku.html" class="hero-card">
+          <span class="hc-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="8" cy="9" r="2.6" stroke="currentColor" stroke-width="1.6"/><circle cx="16" cy="9" r="2.6" stroke="currentColor" stroke-width="1.6"/><path d="M3.5 19c.6-3 2.4-4.4 4.5-4.4S12 16 12.6 19M11.4 19c.6-3 2.4-4.4 4.5-4.4S20 16 20.6 19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+          <span class="hc-txt">相続手続き</span>
+          <span class="hc-arrow">→</span>
+        </a>
+        <a href="contact.html" class="hero-card">
+          <span class="hc-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="3.5" y="5.5" width="17" height="13" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M4.5 7l7.5 6 7.5-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="hc-txt">お問い合わせ</span>
+          <span class="hc-arrow">→</span>
+        </a>
       </div>
     </div>
   </div>
 
-  <img class="hero-leaf hero-leaf-2" src="images/leaf.svg" alt="" aria-hidden="true">
-  <img class="hero-leaf hero-leaf-3" src="images/leaf.svg" alt="" aria-hidden="true">
-
-  <a href="#services" class="hero-scroll" aria-label="下へスクロール"><span class="hs-txt">SCROLL</span><span class="hs-bar"></span></a>
+  <div class="hero-scroll" aria-hidden="true">
+    <span class="hs-circle"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    <span class="hs-txt">SCROLL</span>
+  </div>
 </section>
 
 <!-- ============ 共感メッセージ ============ -->
@@ -231,11 +235,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="brand">
-          <svg class="brand__mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-            <circle cx="24" cy="24" r="23" fill="#ffffff" opacity=".1"/>
-            <path d="M24 36c0-7 0-12 0-12s-7-1-10-6c-1 8 4 13 10 14 0 0-5-5-7-9 4 3 7 5 7 13z" fill="#a7b69a"/>
-            <path d="M24 30s.2-6 3-9c3-3 8-3 8-3s-1 8-5 11c-3 2-6 1-6 1z" fill="#d4dccb"/>
-          </svg>
+          <img src="images/logo.svg" alt="高木行政書士事務所 ロゴ" class="brand__mark" width="40" height="40">
           <span class="brand__text">
             <span class="brand__name">高木行政書士事務所</span>
             <span class="brand__sub">TAKAGI OFFICE</span>
@@ -268,6 +268,6 @@
   <a class="fc-mail" href="contact.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" stroke-width="2"/><path d="M4.5 8l7.5 5.5L19.5 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>無料相談</a>
 </div>
 
-<script src="js/main.js?v=56"></script>
+<script src="js/main.js?v=63"></script>
 </body>
 </html>

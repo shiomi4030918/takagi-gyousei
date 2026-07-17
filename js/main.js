@@ -3,16 +3,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   /* ヘッダーのスクロール影 ＋ ヒーロー上では隠し、スクロールで表示 */
   const header = document.querySelector('.site-header');
-  const hero = document.querySelector('.hero');
   const onScroll = () => {
     if (!header) return;
     header.classList.toggle('scrolled', window.scrollY > 20);
-    if (hero) {
-      const threshold = Math.min(hero.offsetHeight - 120, window.innerHeight * 0.6);
-      header.classList.toggle('is-hidden', window.scrollY < threshold);
-    } else {
-      header.classList.remove('is-hidden');
-    }
+    header.classList.remove('is-hidden');
   };
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
@@ -99,4 +93,20 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   splash.addEventListener('click', close);
   setTimeout(close, 1700);
+});
+
+/* ヒーロー画像の自動切り替え（images/hero1.jpg〜hero3.jpg） */
+document.addEventListener('DOMContentLoaded', function () {
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.hero-photo .hero-slide'));
+  if (slides.length < 2) return;
+  var idx = 0;
+  setInterval(function () {
+    var ready = slides.filter(function (im) {
+      return !im.dataset.missing && im.complete && im.naturalWidth > 0;
+    });
+    if (ready.length < 2) return;
+    idx = (idx + 1) % ready.length;
+    slides.forEach(function (im) { im.classList.remove('is-active'); });
+    ready[idx].classList.add('is-active');
+  }, 5000);
 });
