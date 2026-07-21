@@ -55,17 +55,41 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  /* 問い合わせフォーム（デモ送信） */
+  /* 問い合わせフォーム（contact.php へ送信＋完了モーダル） */
   const form = document.querySelector('#contactForm');
   if (form) {
+    const note = form.querySelector('.form-note');
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const modal = document.getElementById('contactModal');
+    const openModal = () => { if (modal) { modal.classList.add('show'); document.body.style.overflow = 'hidden'; } };
+    const closeModal = () => { if (modal) { modal.classList.remove('show'); document.body.style.overflow = ''; } };
+    if (modal) {
+      modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+      const cbtn = modal.querySelector('.cm-close');
+      if (cbtn) cbtn.addEventListener('click', closeModal);
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+    }
+    const showNote = (msg) => { if (note) { note.textContent = msg; note.classList.add('show'); } };
+
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      const note = form.querySelector('.form-note');
-      if (note) {
-        note.textContent = 'お問い合わせありがとうございます。これはデモ画面のため、実際には送信されません。本番では送信先メールアドレス等の設定が必要です。';
-        note.classList.add('show');
-      }
-      form.reset();
+      const url = form.getAttribute('action') || 'contact.php';
+      if (note) { note.textContent = ''; note.classList.remove('show'); }
+      const original = submitBtn ? submitBtn.innerHTML : '';
+      if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = '送信中…'; }
+      fetch(url, { method: 'POST', body: new FormData(form) })
+        .then((res) => res.json())
+        .then((data) => {
+          if (!data || !data.ok) throw new Error(data && data.error || 'send failed');
+          form.reset();
+          openModal();
+        })
+        .catch(() => {
+          showNote('送信に失敗しました。お手数ですが、時間をおいて再度お試しいただくか、mari@takagi-gyosei.jp へ直接ご連絡ください。');
+        })
+        .then(() => {
+          if (submitBtn) { submitBtn.disabled = false; submitBtn.innerHTML = original; }
+        });
     });
   }
 });
