@@ -106,7 +106,13 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     if (ready.length < 2) return;
     idx = (idx + 1) % ready.length;
-    slides.forEach(function (im) { im.classList.remove('is-active'); });
+    slides.forEach(function (im) {
+      if (im.classList.contains('is-active')) {
+        im.classList.add('is-leaving');
+        setTimeout(function () { im.classList.remove('is-leaving'); }, 1500);
+      }
+      im.classList.remove('is-active');
+    });
     ready[idx].classList.add('is-active');
   }, 5000);
 });
