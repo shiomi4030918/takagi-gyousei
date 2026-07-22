@@ -100,7 +100,10 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 600; line-height: 1.5; 
   padding: 15px 32px; border-radius: 999px;
   font-family: var(--sans); font-weight: 600; font-size: 18.5px;
   letter-spacing: .05em; cursor: pointer; border: none;
+  white-space: nowrap;
 }
+/* 日本語をフレーズ単位で折り返すための塊 */
+.kb { display: inline-block; }
 .btn--primary { background: var(--olive-600); color: #fff; box-shadow: var(--shadow-sm); }
 .btn--primary:hover { background: var(--olive-700); transform: translateY(-2px); box-shadow: var(--shadow-md); }
 .btn--ghost { background: #fff; color: var(--olive-700); border: 1.5px solid var(--olive-300, #b7c4ab); }
@@ -342,4 +345,12 @@ body.menu-open { overflow: hidden; }
 .hero-actions .btn, .cta-actions .btn, .cta-mini .actions .btn { min-width: 252px; justify-content: center; }
 @media (max-width: 768px){
   .hero-actions .btn, .cta-actions .btn, .cta-mini .actions .btn { min-width: 0; width: 100%; }
+}
+
+/* スマホ：長いラベルのボタンが折り返さず収まるように縮小 */
+@media (max-width: 768px) {
+  .btn--lg { padding: 15px 22px; font-size: 16.5px; }
+  .cta-actions .btn, .hero-actions .btn { max-width: 100%; }
+  .cta-card .cta-actions { justify-content: stretch; }
+  .cta-card .cta-actions .btn { width: 100%; justify-content: center; }
 }
