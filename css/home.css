@@ -113,7 +113,8 @@
 .profile { display:grid; grid-template-columns: 1fr 2fr; gap: 48px; align-items:center; }
 .profile-photo {
   border-radius: var(--radius); overflow:hidden; box-shadow: var(--shadow-md);
-  aspect-ratio: 4/5; background:#e6e6e2; display:flex; align-items:center; justify-content:center;
+  aspect-ratio: 2/3; background:#e6e6e2; display:flex; align-items:center; justify-content:center;
+  max-width: 240px; width: 100%;
 }
 .profile-photo svg { width:100%; height:100%; }
 .profile-body .role { font-size: 15.5px; color: var(--olive-500); letter-spacing:.2em; }
